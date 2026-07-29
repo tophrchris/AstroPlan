@@ -1,0 +1,33 @@
+{
+  "version": 1,
+  "title": "Repeated subject visits",
+  "created": "2026-07-29T01:00:00Z",
+  "scheduleContext": {
+    "timeZone": "America/New_York",
+    "windowStart": "2026-07-29T01:00:00Z",
+    "windowEnd": "2026-07-29T05:00:00Z"
+  },
+  "targets": [
+    {
+      "entryId": "m31-wide",
+      "name": "Andromeda Galaxy - wide",
+      "catalogId": "M31",
+      "rightAscensionHours": 0.7123,
+      "declinationDegrees": 41.2688,
+      "startOffsetMinutes": 0,
+      "durationMinutes": 60
+    },
+    {
+      "entryId": "m31-core",
+      "name": "Andromeda Galaxy - core",
+      "catalogId": "M31",
+      "rightAscensionHours": 0.7123,
+      "declinationDegrees": 41.2688,
+      "startOffsetMinutes": 120,
+      "durationMinutes": 60,
+      "example.extension": {
+        "purpose": "A second, independently scheduled framing of M31"
+      }
+    }
+  ]
+}

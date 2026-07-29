@@ -1,0 +1,83 @@
+{
+  "created" : "2026-06-06T20:49:41Z",
+  "notes" : "A survey is being organized to better understand tracking issues with Seestar telescopes.\n\nCapture each of these subjects for at least 1-2 hours.",
+  "scheduleContext" : {
+    "timeZone" : "America/New_York",
+    "windowEnd" : "2026-06-07T10:00:00Z",
+    "windowStart" : "2026-06-07T00:00:00Z"
+  },
+  "targets" : [
+    {
+      "catalogId" : "M81",
+      "dec" : "+69d04m00s",
+      "declinationDegrees" : 69.0667,
+      "durationMinutes" : 90,
+      "endTime" : "2026-06-06T23:30:00-04:00",
+      "name" : "Bode's Galaxy (M81)",
+      "notes" : "This is a medium altitude subject",
+      "ra" : "09h55m36s",
+      "rightAscensionHours" : 9.926639999999997,
+      "startOffsetMinutes" : 120,
+      "startTime" : "2026-06-06T22:00:00-04:00",
+      "timeZone" : "America/New_York"
+    },
+    {
+      "catalogId" : "M101",
+      "dec" : "+54d21m00s",
+      "declinationDegrees" : 54.35,
+      "durationMinutes" : 90,
+      "endTime" : "2026-06-07T01:00:00-04:00",
+      "name" : "Pinwheel Galaxy (M101)",
+      "notes" : "This is a high altitude subject",
+      "ra" : "14h03m12s",
+      "rightAscensionHours" : 14.053333333333335,
+      "startOffsetMinutes" : 210,
+      "startTime" : "2026-06-06T23:30:00-04:00",
+      "timeZone" : "America/New_York"
+    },
+    {
+      "catalogId" : "M13",
+      "dec" : "+36d27m41s",
+      "declinationDegrees" : 36.461319444444,
+      "durationMinutes" : 90,
+      "endTime" : "2026-06-07T02:30:00-04:00",
+      "name" : "Hercules Globular Cluster (M13)",
+      "notes" : "This is a high altitude cluster subject",
+      "ra" : "16h41m42s",
+      "rightAscensionHours" : 16.694898333333335,
+      "startOffsetMinutes" : 300,
+      "startTime" : "2026-06-07T01:00:00-04:00",
+      "timeZone" : "America/New_York"
+    },
+    {
+      "catalogId" : "M12",
+      "dec" : "-01d57m00s",
+      "declinationDegrees" : -1.95,
+      "durationMinutes" : 90,
+      "endTime" : "2026-06-07T04:00:00-04:00",
+      "name" : "Messier 12 (M12) (M12)",
+      "notes" : "This is a medium altitude cluster subject",
+      "ra" : "16h47m12s",
+      "rightAscensionHours" : 16.786673333333333,
+      "startOffsetMinutes" : 390,
+      "startTime" : "2026-06-07T02:30:00-04:00",
+      "timeZone" : "America/New_York"
+    },
+    {
+      "catalogId" : "NGC6503",
+      "dec" : "+70d08m40s",
+      "declinationDegrees" : 70.14436111111112,
+      "durationMinutes" : 60,
+      "endTime" : "2026-06-06T22:00:00-04:00",
+      "name" : "NGC6503",
+      "notes" : "This is an alternate subject of M81 is unavailable.",
+      "ra" : "17h49m26s",
+      "rightAscensionHours" : 17.82388888888889,
+      "startOffsetMinutes" : 60,
+      "startTime" : "2026-06-06T21:00:00-04:00",
+      "timeZone" : "America/New_York"
+    }
+  ],
+  "title" : "Seestar survey",
+  "version" : 1
+}

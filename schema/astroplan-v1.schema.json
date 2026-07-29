@@ -1,0 +1,125 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://astroguide.space/standards/astroplan/schema/astroplan-v1.schema.json",
+  "title": "AstroPlan draft version 1",
+  "description": "A portable astronomy observing plan.",
+  "type": "object",
+  "required": [
+    "version",
+    "title",
+    "created",
+    "targets"
+  ],
+  "properties": {
+    "version": {
+      "const": 1
+    },
+    "title": {
+      "type": "string",
+      "minLength": 1
+    },
+    "author": {
+      "type": "string"
+    },
+    "created": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "notes": {
+      "type": "string"
+    },
+    "scheduleContext": {
+      "$ref": "#/$defs/scheduleContext"
+    },
+    "targets": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/target"
+      }
+    }
+  },
+  "additionalProperties": true,
+  "$defs": {
+    "scheduleContext": {
+      "type": "object",
+      "required": [
+        "timeZone"
+      ],
+      "properties": {
+        "timeZone": {
+          "type": "string",
+          "minLength": 1
+        },
+        "windowStart": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "windowEnd": {
+          "type": "string",
+          "format": "date-time"
+        }
+      },
+      "additionalProperties": true
+    },
+    "target": {
+      "type": "object",
+      "required": [
+        "name",
+        "catalogId"
+      ],
+      "properties": {
+        "entryId": {
+          "type": "string",
+          "minLength": 1
+        },
+        "name": {
+          "type": "string",
+          "minLength": 1
+        },
+        "catalogId": {
+          "type": "string",
+          "minLength": 1
+        },
+        "ra": {
+          "type": "string"
+        },
+        "dec": {
+          "type": "string"
+        },
+        "rightAscensionHours": {
+          "type": "number",
+          "minimum": 0,
+          "exclusiveMaximum": 24
+        },
+        "declinationDegrees": {
+          "type": "number",
+          "minimum": -90,
+          "maximum": 90
+        },
+        "startOffsetMinutes": {
+          "type": "integer"
+        },
+        "durationMinutes": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "startTime": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "endTime": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "timeZone": {
+          "type": "string",
+          "minLength": 1
+        },
+        "notes": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": true
+    }
+  }
+}

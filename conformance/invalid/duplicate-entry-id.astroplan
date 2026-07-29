@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "title": "Invalid duplicate entry identity",
+  "created": "2026-07-29T01:00:00Z",
+  "targets": [
+    {
+      "entryId": "same-entry",
+      "name": "M31 first visit",
+      "catalogId": "M31"
+    },
+    {
+      "entryId": "same-entry",
+      "name": "M31 second visit",
+      "catalogId": "M31"
+    }
+  ]
+}

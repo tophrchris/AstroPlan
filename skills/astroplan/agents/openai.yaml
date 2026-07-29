@@ -1,0 +1,4 @@
+interface:
+  display_name: "AstroPlan"
+  short_description: "Read, write, and validate AstroPlan files"
+  default_prompt: "Use $astroplan to create or inspect an AstroPlan observing schedule."

@@ -1,0 +1,77 @@
+{
+  "created" : "2026-07-17T04:01:05Z",
+  "scheduleContext" : {
+    "timeZone" : "America/New_York",
+    "windowEnd" : "2026-07-17T10:00:00Z",
+    "windowStart" : "2026-07-17T00:00:00Z"
+  },
+  "targets" : [
+    {
+      "catalogId" : "NGC6888",
+      "dec" : "+38d21m18s",
+      "declinationDegrees" : 38.35494444444445,
+      "durationMinutes" : 100,
+      "endTime" : "2026-07-16T22:40:00-04:00",
+      "name" : "Crescent Nebula (NGC6888)",
+      "ra" : "20h12m06s",
+      "rightAscensionHours" : 20.201666666666664,
+      "startOffsetMinutes" : 60,
+      "startTime" : "2026-07-16T21:00:00-04:00",
+      "timeZone" : "America/New_York"
+    },
+    {
+      "catalogId" : "NGC7380",
+      "dec" : "+58d07m57s",
+      "declinationDegrees" : 58.132416666666664,
+      "durationMinutes" : 100,
+      "endTime" : "2026-07-17T00:20:00-04:00",
+      "name" : "Wizard Nebula (NGC7380)",
+      "ra" : "22h47m21s",
+      "rightAscensionHours" : 22.789166666666667,
+      "startOffsetMinutes" : 160,
+      "startTime" : "2026-07-16T22:40:00-04:00",
+      "timeZone" : "America/New_York"
+    },
+    {
+      "catalogId" : "M31",
+      "dec" : "+41d16m08s",
+      "declinationDegrees" : 41.26875,
+      "durationMinutes" : 100,
+      "endTime" : "2026-07-17T02:00:00-04:00",
+      "name" : "Andromeda Galaxy (M31)",
+      "ra" : "00h42m44s",
+      "rightAscensionHours" : 0.7123138888888662,
+      "startOffsetMinutes" : 260,
+      "startTime" : "2026-07-17T00:20:00-04:00",
+      "timeZone" : "America/New_York"
+    },
+    {
+      "catalogId" : "SH2-101",
+      "dec" : "+35d17m00s",
+      "declinationDegrees" : 35.28333333333333,
+      "durationMinutes" : 100,
+      "endTime" : "2026-07-17T03:40:00-04:00",
+      "name" : "Tulip Nebula (SH2-101)",
+      "ra" : "19h59m00s",
+      "rightAscensionHours" : 19.983333333333334,
+      "startOffsetMinutes" : 360,
+      "startTime" : "2026-07-17T02:00:00-04:00",
+      "timeZone" : "America/New_York"
+    },
+    {
+      "catalogId" : "NGC7635",
+      "dec" : "+61d12m45s",
+      "declinationDegrees" : 61.212361111111115,
+      "durationMinutes" : 100,
+      "endTime" : "2026-07-17T05:20:00-04:00",
+      "name" : "Bubble Nebula (NGC7635)",
+      "ra" : "23h20m45s",
+      "rightAscensionHours" : 23.345833333333335,
+      "startOffsetMinutes" : 460,
+      "startTime" : "2026-07-17T03:40:00-04:00",
+      "timeZone" : "America/New_York"
+    }
+  ],
+  "title" : "Research baseline - deep",
+  "version" : 1
+}
