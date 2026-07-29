@@ -23,6 +23,8 @@ declared stable.
 - [Registered extensions](extensions)
 - [Implementation prompts](prompts)
 - [AstroPlan Codex skill](skills/astroplan)
+- [Contributing](CONTRIBUTING.md)
+- [Security policy](SECURITY.md)
 
 The public overview and developer introduction are also available at
 [astroguide.space/standards/astroplan](https://astroguide.space/standards/astroplan/).

@@ -1,0 +1,38 @@
+name: Specification proposal
+description: Propose a compatible core change or registered extension.
+title: "[Proposal] "
+labels:
+  - proposal
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for helping AstroPlan work across more astronomy applications.
+  - type: textarea
+    id: problem
+    attributes:
+      label: Interoperability problem
+      description: What cannot be represented or exchanged reliably today?
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed representation
+      description: Include example JSON and field semantics when possible.
+    validations:
+      required: true
+  - type: textarea
+    id: implementations
+    attributes:
+      label: Relevant implementations
+      description: Which applications, devices, or libraries would produce or consume this?
+  - type: checkboxes
+    id: compatibility
+    attributes:
+      label: Compatibility
+      options:
+        - label: Existing version 1 readers can safely ignore this change.
+          required: true
+        - label: Repeated schedule entries and unknown fields remain preserved.
+          required: true

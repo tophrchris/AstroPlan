@@ -1,0 +1,36 @@
+name: Interoperability bug
+description: Report a parsing, validation, or round-trip problem.
+title: "[Interop] "
+labels:
+  - bug
+body:
+  - type: input
+    id: producer
+    attributes:
+      label: Producing application
+      placeholder: Application and version
+  - type: input
+    id: consumer
+    attributes:
+      label: Consuming application
+      placeholder: Application and version
+  - type: textarea
+    id: behavior
+    attributes:
+      label: What happened?
+      description: Describe the observed and expected behavior.
+    validations:
+      required: true
+  - type: textarea
+    id: sample
+    attributes:
+      label: Minimal AstroPlan sample
+      description: Remove private site information, account identifiers, and secrets.
+      render: json
+  - type: checkboxes
+    id: privacy
+    attributes:
+      label: Data safety
+      options:
+        - label: I removed private observing-site information and secrets.
+          required: true
