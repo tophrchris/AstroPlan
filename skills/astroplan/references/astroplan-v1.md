@@ -23,6 +23,9 @@ Every target occurrence is a separate schedule entry. Never deduplicate entries
 by catalog identifier, name, or coordinates. Repeated visits and mosaic panels
 may intentionally refer to the same subject.
 
+Array order preserves the author's presentation order. When entries contain
+timing, offsets or timestamps determine chronological execution order.
+
 Required target fields:
 
 - `name`
@@ -44,6 +47,10 @@ Optional target fields:
 
 Coordinates are equatorial J2000. Prefer decimal coordinates over display
 strings when both are present.
+
+Core target coordinates identify the catalog subject. A registered framing
+extension may provide a different scheduled pointing center; use the extension
+center for pointing and preserve the core coordinates for subject identity.
 
 When valid shared-window offsets conflict with absolute timestamps, prefer
 `windowStart + startOffsetMinutes`.

@@ -62,6 +62,29 @@ def optional_number(
         errors.append(f"{path}.{key}: expected range [{minimum}, {maximum}{upper}")
 
 
+def require_number(
+    container: dict[str, Any],
+    key: str,
+    path: str,
+    errors: list[str],
+    minimum: float,
+    maximum: float,
+    maximum_inclusive: bool = True,
+) -> None:
+    if key not in container:
+        errors.append(f"{path}.{key}: required")
+        return
+    optional_number(
+        container,
+        key,
+        path,
+        errors,
+        minimum,
+        maximum,
+        maximum_inclusive,
+    )
+
+
 def optional_integer(
     container: dict[str, Any],
     key: str,
@@ -77,6 +100,90 @@ def optional_integer(
         return
     if minimum is not None and value < minimum:
         errors.append(f"{path}.{key}: expected a value >= {minimum}")
+
+
+def validate_capture_studio_framing(
+    framing: Any,
+    path: str,
+    errors: list[str],
+) -> None:
+    if not isinstance(framing, dict):
+        errors.append(f"{path}: expected an object")
+        return
+
+    if framing.get("schemaVersion") != 1:
+        errors.append(f"{path}.schemaVersion: expected integer 1")
+
+    for key in (
+        "source",
+        "subjectCatalogId",
+        "subjectDisplayName",
+        "panelId",
+        "panelTitle",
+        "telescopeId",
+        "telescopeName",
+        "frameRotationConvention",
+    ):
+        require_string(framing, key, path, errors)
+
+    if framing.get("frameRotationConvention") != "degreesEastOfJ2000North":
+        errors.append(
+            f"{path}.frameRotationConvention: "
+            "expected 'degreesEastOfJ2000North'"
+        )
+
+    require_number(
+        framing,
+        "panelCenterRightAscensionHoursJ2000",
+        path,
+        errors,
+        0,
+        24,
+        maximum_inclusive=False,
+    )
+    require_number(
+        framing,
+        "panelCenterDeclinationDegreesJ2000",
+        path,
+        errors,
+        -90,
+        90,
+    )
+
+    for key in ("frameWidthDegrees", "frameHeightDegrees", "frameScale"):
+        require_number(
+            framing,
+            key,
+            path,
+            errors,
+            0,
+            math.inf,
+            maximum_inclusive=True,
+        )
+        value = framing.get(key)
+        if (
+            isinstance(value, (int, float))
+            and not isinstance(value, bool)
+            and value <= 0
+        ):
+            errors.append(f"{path}.{key}: expected a value > 0")
+
+    for key in ("frameRotationDegrees", "frameOffsetXDegrees", "frameOffsetYDegrees"):
+        require_number(
+            framing,
+            key,
+            path,
+            errors,
+            -math.inf,
+            math.inf,
+        )
+
+    for key in ("filterIds", "filterNames"):
+        value = framing.get(key)
+        if not isinstance(value, list) or not all(
+            isinstance(item, str) for item in value
+        ):
+            errors.append(f"{path}.{key}: expected an array of strings")
 
 
 def validate_payload(payload: Any) -> list[str]:
@@ -157,6 +264,13 @@ def validate_payload(payload: Any) -> list[str]:
         for key in ("startTime", "endTime"):
             if key in target:
                 parse_timestamp(target[key], f"{path}.{key}", errors)
+
+        if "captureStudioFraming" in target:
+            validate_capture_studio_framing(
+                target["captureStudioFraming"],
+                f"{path}.captureStudioFraming",
+                errors,
+            )
 
     return errors
 

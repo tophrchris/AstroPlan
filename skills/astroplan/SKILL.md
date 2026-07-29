@@ -16,6 +16,10 @@ schedule-entry identity, order, timing, coordinates, and extension data.
    catalog subjects.
 4. Treat repeated catalog subjects as intentional separate schedule entries.
 5. Describe unknown extension fields without deleting or normalizing them.
+6. When `captureStudioFraming` is present, read
+   `references/capture-studio-framing-v1.md`. Report the scheduled panel center,
+   effective frame dimensions, position angle, telescope, and filters
+   separately from the parent catalog subject.
 
 ## Create
 
@@ -65,5 +69,6 @@ python3 scripts/validate_astroplan.py plan.astroplan
 ```
 
 The validator checks the portable core without rejecting unknown extension
-fields. A successful structural validation does not prove that every extension
-is understood by the consuming application.
+fields. It also validates the registered Capture Studio framing extension when
+present. A successful structural validation does not prove that every
+unregistered extension is understood by the consuming application.

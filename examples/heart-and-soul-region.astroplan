@@ -1,0 +1,154 @@
+{
+  "created" : "2026-07-29T01:03:49Z",
+  "scheduleContext" : {
+    "timeZone" : "America/New_York",
+    "windowEnd" : "2026-07-29T10:00:00Z",
+    "windowStart" : "2026-07-29T00:00:00Z"
+  },
+  "targets" : [
+    {
+      "captureStudioFraming" : {
+        "activeRigFilterId" : "optolong-l-extreme",
+        "activeRigMountChoice" : "eq",
+        "activeRigPowerSource" : "constant",
+        "activeRigTelescopeId" : "zwo-seestar-s30-pro",
+        "filterIds" : [
+          "optolong-l-extreme",
+          "svbony-sv220-sii-oiii-7nm"
+        ],
+        "filterNames" : [
+          "L-eXtreme",
+          "SV220 (SII+OIII, 7nm)"
+        ],
+        "frameHeightDegrees" : 3.99,
+        "frameOffsetXDegrees" : -2.553278911666971,
+        "frameOffsetYDegrees" : -1.1806619237357099,
+        "frameRotationConvention" : "degreesEastOfJ2000North",
+        "frameRotationDegrees" : 0,
+        "frameScale" : 1,
+        "frameWidthDegrees" : 2.24,
+        "panelCenterDeclinationDegreesJ2000" : 60.27622696515318,
+        "panelCenterRightAscensionHoursJ2000" : 2.9009623103725906,
+        "panelId" : "D94410C5-0C59-4522-A2C1-60705C575FB4",
+        "panelTargetCatalogId" : "SH2-199",
+        "panelTargetDisplayName" : "Soul Nebula",
+        "panelTitle" : "S30PRO LEXT+SO7",
+        "previewPresentation" : "base",
+        "schemaVersion" : 1,
+        "source" : "captureStudioSchedule",
+        "subjectCatalogId" : "IC1805",
+        "subjectDisplayName" : "Heart Nebula (IC1805)",
+        "telescopeId" : "zwo-seestar-s30-pro",
+        "telescopeName" : "Seestar S30 Pro"
+      },
+      "catalogId" : "SH2-199",
+      "dec" : "+60d24m00s",
+      "declinationDegrees" : 60.4,
+      "durationMinutes" : 120,
+      "endTime" : "2026-07-29T04:00:00-04:00",
+      "name" : "Sharpless 199 (SH2-199) (SH2-199)",
+      "ra" : "02h54m00s",
+      "rightAscensionHours" : 2.9,
+      "startOffsetMinutes" : 360,
+      "startTime" : "2026-07-29T02:00:00-04:00",
+      "timeZone" : "America/New_York"
+    },
+    {
+      "captureStudioFraming" : {
+        "activeRigFilterId" : "optolong-l-extreme",
+        "activeRigMountChoice" : "eq",
+        "activeRigPowerSource" : "constant",
+        "activeRigTelescopeId" : "zwo-seestar-s30-pro",
+        "filterIds" : [
+          "optolong-l-extreme",
+          "svbony-sv220-sii-oiii-7nm"
+        ],
+        "filterNames" : [
+          "L-eXtreme",
+          "SV220 (SII+OIII, 7nm)"
+        ],
+        "frameHeightDegrees" : 3.99,
+        "frameOffsetXDegrees" : -0.3452591960528355,
+        "frameOffsetYDegrees" : -0.1964443970396299,
+        "frameRotationConvention" : "degreesEastOfJ2000North",
+        "frameRotationDegrees" : 0,
+        "frameScale" : 1,
+        "frameWidthDegrees" : 2.24,
+        "panelCenterDeclinationDegreesJ2000" : 61.26044449184926,
+        "panelCenterRightAscensionHoursJ2000" : 2.5928936796664424,
+        "panelId" : "505759EA-4AED-4197-843D-59AA75B4B883",
+        "panelTargetCatalogId" : "IC1805",
+        "panelTargetDisplayName" : "Heart Nebula",
+        "panelTitle" : "S30PRO LEXT+SO7",
+        "previewPresentation" : "base",
+        "schemaVersion" : 1,
+        "source" : "captureStudioSchedule",
+        "subjectCatalogId" : "IC1805",
+        "subjectDisplayName" : "Heart Nebula (IC1805)",
+        "telescopeId" : "zwo-seestar-s30-pro",
+        "telescopeName" : "Seestar S30 Pro"
+      },
+      "catalogId" : "IC1805",
+      "dec" : "+61d27m25s",
+      "declinationDegrees" : 61.45688888888889,
+      "durationMinutes" : 120,
+      "endTime" : "2026-07-29T06:00:00-04:00",
+      "name" : "Heart Nebula (IC1805)",
+      "ra" : "02h32m41s",
+      "rightAscensionHours" : 2.5447222222222234,
+      "startOffsetMinutes" : 480,
+      "startTime" : "2026-07-29T04:00:00-04:00",
+      "timeZone" : "America/New_York"
+    },
+    {
+      "captureStudioFraming" : {
+        "activeRigFilterId" : "optolong-l-extreme",
+        "activeRigMountChoice" : "eq",
+        "activeRigPowerSource" : "constant",
+        "activeRigTelescopeId" : "zwo-seestar-s30-pro",
+        "filterIds" : [
+          "optolong-l-extreme",
+          "svbony-sv220-sii-oiii-7nm"
+        ],
+        "filterNames" : [
+          "L-eXtreme",
+          "SV220 (SII+OIII, 7nm)"
+        ],
+        "frameHeightDegrees" : 3.99,
+        "frameOffsetXDegrees" : -1.542991147198449,
+        "frameOffsetYDegrees" : -0.826540439282827,
+        "frameRotationConvention" : "degreesEastOfJ2000North",
+        "frameRotationDegrees" : 55.701306751475855,
+        "frameScale" : 2,
+        "frameWidthDegrees" : 2.24,
+        "panelCenterDeclinationDegreesJ2000" : 60.63034844960606,
+        "panelCenterRightAscensionHoursJ2000" : 2.7600043442738027,
+        "panelId" : "C35DC5F1-304D-4579-B4B8-D21A9CF2D8CE",
+        "panelTargetCatalogId" : "IC1805",
+        "panelTargetDisplayName" : "Heart Nebula",
+        "panelTitle" : "S30PRO LEXT+SO7",
+        "previewPresentation" : "base",
+        "schemaVersion" : 1,
+        "source" : "captureStudioSchedule",
+        "subjectCatalogId" : "IC1805",
+        "subjectDisplayName" : "Heart Nebula (IC1805)",
+        "telescopeId" : "zwo-seestar-s30-pro",
+        "telescopeName" : "Seestar S30 Pro"
+      },
+      "catalogId" : "IC1805",
+      "dec" : "+61d27m25s",
+      "declinationDegrees" : 61.45688888888889,
+      "durationMinutes" : 140,
+      "endTime" : "2026-07-29T00:20:00-04:00",
+      "name" : "Heart Nebula (IC1805)",
+      "notes" : "This is a wide field establishing frame for the heart and soul nebulas together",
+      "ra" : "02h32m41s",
+      "rightAscensionHours" : 2.5447222222222234,
+      "startOffsetMinutes" : 120,
+      "startTime" : "2026-07-28T22:00:00-04:00",
+      "timeZone" : "America/New_York"
+    }
+  ],
+  "title" : "Unnamed Schedule",
+  "version" : 1
+}

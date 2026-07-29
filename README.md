@@ -20,6 +20,7 @@ declared stable.
 - [Draft version 1 specification](SPECIFICATION.md)
 - [JSON Schema](schema/astroplan-v1.schema.json)
 - [Example files](examples)
+- [Registered extensions](extensions)
 - [Implementation prompts](prompts)
 - [AstroPlan Codex skill](skills/astroplan)
 

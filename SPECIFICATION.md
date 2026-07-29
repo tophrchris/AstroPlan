@@ -27,7 +27,10 @@ An AstroPlan file MUST contain one JSON object with these top-level fields.
 | `scheduleContext` | object | Optional | Shared time zone and observing window. |
 | `targets` | array | Required | Ordered schedule entries. |
 
-The order of `targets` is the intended plan order.
+The order of `targets` is the author application's presentation order. When
+entries do not include timing, readers MAY also treat it as the intended
+execution order. When entries include schedule timing, their offsets or
+timestamps determine chronological execution order.
 
 Every occurrence in the `targets` array is a distinct schedule entry. Multiple
 entries MAY refer to the same catalog subject and MAY use the same `catalogId`.
@@ -68,9 +71,11 @@ Writers that support editing or round trips SHOULD provide a unique `entryId`
 for every schedule entry. Readers MUST still preserve separate occurrences when
 older files omit `entryId`.
 
-Coordinates MUST describe the scheduled center point when the entry represents
-a custom framing or mosaic panel. Applications MAY carry the parent subject's
-identity and richer framing metadata in extension fields.
+The core coordinates identify the astronomical subject. A registered framing
+extension MAY provide a different scheduled pointing center for a custom
+framing or mosaic panel. When it does, framing-aware readers MUST use the
+extension's pointing center for execution while retaining the core subject
+coordinates for identity and catalog resolution.
 
 ## 4. Coordinates
 
@@ -86,7 +91,9 @@ decimal values.
 
 ## 5. Timing
 
-- Target-array order defines sequence.
+- Target-array order preserves author presentation order.
+- When schedule timing is present, chronological execution order is determined
+  by offsets or timestamps rather than array position.
 - When `windowStart` and `startOffsetMinutes` are both present, their
   combination is the preferred portable start time.
 - `durationMinutes` describes how long the entry is scheduled.
@@ -102,7 +109,9 @@ Readers MUST ignore unknown top-level and target-level fields when they can
 safely continue. Editors SHOULD preserve unknown fields during a lossless
 round trip.
 
-Experimental application-specific fields SHOULD use a namespaced key, such as:
+Registered extensions MAY use an agreed field name documented under
+[`extensions/`](extensions). Experimental application-specific fields SHOULD
+use a namespaced key, such as:
 
 ```json
 {

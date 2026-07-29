@@ -1,0 +1,149 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://astroguide.space/standards/astroplan/schema/extensions/capture-studio-framing-v1.schema.json",
+  "title": "AstroPlan Capture Studio framing extension version 1",
+  "type": "object",
+  "required": [
+    "schemaVersion",
+    "source",
+    "subjectCatalogId",
+    "subjectDisplayName",
+    "panelId",
+    "panelTitle",
+    "panelCenterRightAscensionHoursJ2000",
+    "panelCenterDeclinationDegreesJ2000",
+    "frameWidthDegrees",
+    "frameHeightDegrees",
+    "frameScale",
+    "frameRotationDegrees",
+    "frameRotationConvention",
+    "frameOffsetXDegrees",
+    "frameOffsetYDegrees",
+    "telescopeId",
+    "telescopeName",
+    "filterIds",
+    "filterNames"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "const": 1
+    },
+    "source": {
+      "type": "string",
+      "minLength": 1
+    },
+    "subjectCatalogId": {
+      "type": "string",
+      "minLength": 1
+    },
+    "subjectDisplayName": {
+      "type": "string",
+      "minLength": 1
+    },
+    "panelId": {
+      "type": "string",
+      "minLength": 1
+    },
+    "panelTitle": {
+      "type": "string",
+      "minLength": 1
+    },
+    "panelTargetCatalogId": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "panelTargetDisplayName": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "panelCenterRightAscensionHoursJ2000": {
+      "type": "number",
+      "minimum": 0,
+      "exclusiveMaximum": 24
+    },
+    "panelCenterDeclinationDegreesJ2000": {
+      "type": "number",
+      "minimum": -90,
+      "maximum": 90
+    },
+    "frameWidthDegrees": {
+      "type": "number",
+      "exclusiveMinimum": 0
+    },
+    "frameHeightDegrees": {
+      "type": "number",
+      "exclusiveMinimum": 0
+    },
+    "frameScale": {
+      "type": "number",
+      "exclusiveMinimum": 0
+    },
+    "frameRotationDegrees": {
+      "type": "number"
+    },
+    "frameRotationConvention": {
+      "const": "degreesEastOfJ2000North"
+    },
+    "frameOffsetXDegrees": {
+      "type": "number"
+    },
+    "frameOffsetYDegrees": {
+      "type": "number"
+    },
+    "telescopeId": {
+      "type": "string",
+      "minLength": 1
+    },
+    "telescopeName": {
+      "type": "string",
+      "minLength": 1
+    },
+    "filterIds": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "filterNames": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "activeRigTelescopeId": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "activeRigFilterId": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "activeRigMountChoice": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "activeRigPowerSource": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "previewPresentation": {
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  },
+  "additionalProperties": true
+}
