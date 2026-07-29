@@ -26,6 +26,28 @@ declared stable.
 The public overview and developer introduction are also available at
 [astroguide.space/standards/astroplan](https://astroguide.space/standards/astroplan/).
 
+## Install the AstroPlan skill
+
+The repository includes an actual OpenAI agent skill for creating, reading,
+editing, validating, summarizing, and converting `.astroplan` files.
+
+In Codex, ask the built-in installer:
+
+```text
+Use $skill-installer to install the skill from
+https://github.com/tophrchris/AstroPlan/tree/main/skills/astroplan
+```
+
+For a manual user-level installation, place the `skills/astroplan` directory at:
+
+```text
+~/.agents/skills/astroplan
+```
+
+ChatGPT desktop can then select the skill with `@AstroPlan`. Codex can invoke it
+with `$astroplan`. Start a new conversation after installation; if the skill
+does not appear, restart the desktop application.
+
 ## Compatibility principles
 
 AstroPlan readers should:
